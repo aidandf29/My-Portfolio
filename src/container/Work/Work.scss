@@ -56,20 +56,21 @@
 }
 
 .app__work-portfolio {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
+  align-items: center;
 
   .app__work-item {
+    width: 270px;
     flex-direction: column;
+
+    margin: 2rem;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: #fff;
     color: #000;
+
     cursor: pointer;
     transition: all 0.3s ease;
 
@@ -78,8 +79,14 @@
     }
 
     @media screen and (min-width: 2000px) {
+      width: 470px;
       padding: 1.25rem;
       border-radius: 0.75rem;
+    }
+
+    @media screen and (max-width: 300px) {
+      width: 100%;
+      margin: 1rem;
     }
   }
 }
